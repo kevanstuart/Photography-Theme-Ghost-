@@ -1,0 +1,40 @@
+/**
+ * SCSS File	: _typography.scss
+ * SCSS Dir 	: setup
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Base Variables
+ * -------------------------------------------------------------------------------------*/
+$heading				: "Wask";
+$folder 				: "../fonts/wask/wask";
+
+$primary 				: "Open Sans Condensed";
+
+$modular-scale-base  	: 1rem;
+$modular-scale-ratio 	: $major-second;
+
+
+/**
+ * Import google font(s) based on design
+ * -------------------------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+
+/**
+ * Import font(s) based on design
+ * -------------------------------------------------------------------------------------*/
+@include font-face($heading, $folder, $file-formats: eot woff);
+
+
+/**
+ * Mixin for calculating line height of elements
+ * -------------------------------------------------------------------------------------*/
+@mixin font-size($size:0, $line-height:1.5)
+{
+	font-size:modular-scale($size);
+	line-height:$line-height;
+}
+

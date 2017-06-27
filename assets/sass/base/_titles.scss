@@ -1,0 +1,53 @@
+/**
+ * SCSS File	: _titles.scss
+ * SCSS Dir 	: base
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Mixin
+ * -------------------------------------------------------------------------------------*/
+@mixin set-title($font:$heading, $font-size:1)
+{
+	@include font-size($font-size);
+	font-family:$font, sans-serif;
+}
+
+
+/**
+ * Basic Titles
+ * -------------------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+	font-weight:400;
+	padding:0;
+	margin:0;
+}
+
+
+h1, h2
+{
+	@include set-title($heading, 5);
+	text-transform:uppercase;
+}
+
+
+/**
+ * Post Titles
+ * -------------------------------------------------------------------------------------*/
+.post-title,
+.post-list-title,
+.tag-title
+{
+	@include font-size(6,1);
+	text-align:center;
+}
+
+.post-template .post-title,
+.tag-title
+{
+	@include padding(0 0 3rem);
+}
+
+

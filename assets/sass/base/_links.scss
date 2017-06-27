@@ -1,0 +1,159 @@
+/**
+ * SCSS File	: _links.scss
+ * SCSS Dir 	: base
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Site Footer Links
+ * -------------------------------------------------------------------------------------*/
+.site-footer a
+{
+	@include set-colour('color', accent);
+}
+
+
+/**
+ * Logo Link
+ * -------------------------------------------------------------------------------------*/
+.site-header .logo-link
+{
+	@include set-colour('border-color', darkest);
+	@include border-style(solid);
+	@include border-width(3px);
+	@include size(200px 46px);
+	@include padding(0.5rem);
+	display:block;
+	float:left;
+
+	&:hover
+	{
+		@include set-colour('border-color', accent);
+	}
+}
+
+
+/**
+ * Post Title Links
+ * -------------------------------------------------------------------------------------*/
+.post-title a,
+.post-list-title a
+{
+	@include set-colour('color', darkest);
+	display:inline-block;
+	text-decoration:none;
+}
+
+
+/**
+ * Site Navigation Links
+ * -------------------------------------------------------------------------------------*/
+.site-nav ul a
+{
+	@include set-colour('color', darkest);
+	@include font-size(4, 40px);
+	
+	font-family:$heading, sans-serif;
+	text-transform:uppercase;
+	text-decoration:none;
+	display:block;
+
+	&:hover
+	{
+		@include set-colour('color', accent);
+	}
+}
+
+
+/**
+ * Index Gallery Links
+ * -------------------------------------------------------------------------------------*/
+.index-loop a
+{
+	position:relative;
+	display:block;
+
+	&:after
+	{
+		transition: background-color 0.5s ease;
+		position:absolute;
+		content:"";
+		bottom:0;
+		right:0;
+		left:0;
+		top:0;
+	}
+
+	&:hover
+	{
+		&:after
+		{
+			background-color:rgba(255,255,255,0.1);
+		}
+	}
+}
+
+
+/**
+ * Tags List Links
+ * -------------------------------------------------------------------------------------*/
+.tags-list ul a
+{
+	@include set-colour(color, lightest);
+	@include padding(5px 10px);
+	@include font-size(3, 1);
+	@include margin(0 10px);
+
+	transition: border 0.5s ease;
+	border:1px solid colours(lightest);
+	font-family:$heading, sans-serif;
+	text-transform:uppercase;
+	text-decoration:none;
+	display:block;
+
+	&:hover
+	{
+		@include set-colour('border-color', accent);
+	}
+}
+
+
+.tags-list .social a
+{
+	@include set-colour('color', lightest);
+	@include margin(0 10px);
+	@include padding(5px);
+	border:1px solid colours(darkest);
+	transition: border 0.5s ease;
+	text-decoration:none;
+	display:inline-block;
+
+	&:hover
+	{
+		@include set-colour('border-color', accent);
+	}
+}
+
+/*article header a.img-link
+{
+	@include margin(0 auto);
+	overflow:hidden;
+	max-width:94vw;
+	display:block;
+}*/
+
+
+
+
+
+/*
+
+
+
+
+
+.tags-list ul li.nav-current a
+{
+	@include set-colour('border-color', accent);
+}*/

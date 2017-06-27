@@ -1,0 +1,53 @@
+/**
+ * SCSS File	: _colours.scss
+ * SCSS Dir 	: setup
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Base Variables
+ * -------------------------------------------------------------------------------------*/
+$percentage			: 10%;
+
+
+/**
+ * Sass Maps
+ * -------------------------------------------------------------------------------------*/
+$colour-map : (
+	lightest       	: #FFFFFF,
+	darkest			: #282a29,
+	accent			: #c70000
+);
+
+
+/**
+ * Mixins
+ * -------------------------------------------------------------------------------------*/
+@mixin set-colour($property:'background', $colour:darkest, $adjust:false, $amount:$percentage)
+{
+	@if $adjust == 'lighten'
+	{
+		#{$property}: lighten(colours($colour), $amount);
+	}
+	@else if $adjust == 'darken'
+	{
+		#{$property}: darken(colours($colour), $amount);
+	}
+	@else
+	{
+		#{$property}: colours($colour);
+	}
+}
+
+
+/**
+ * Helper Functions
+ * -------------------------------------------------------------------------------------*/
+@function colours($tone:darkest) {
+    @return map-get(
+    	$colour-map, 
+    	$tone
+    );
+}
+

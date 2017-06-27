@@ -1,0 +1,30 @@
+	/**
+ * SCSS File	: _base.scss
+ * SCSS Dir 	: base
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Basic Styles
+ * -------------------------------------------------------------------------------------*/
+*
+{
+	box-sizing: border-box;
+}
+
+
+html
+{
+	@include set-colour( 'background', lightest );
+	@include set-colour( 'color', darkest );
+ 	font-family:$primary, sans-serif;
+ 	font-weight:400;
+}
+
+
+body
+{	
+	@include font-size(0);
+}
+

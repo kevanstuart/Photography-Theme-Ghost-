@@ -1,0 +1,14 @@
+{{#get "posts" filter="featured:true" limit="1" as |featured|}}
+<section class="featured-post">
+	{{#foreach featured}}
+	<article>
+	    <header>
+	    	<a href="{{url}}" class="img-link">
+	    		<img src={{image}} alt="{{title}}"/>
+	    	</a>
+	    	<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+	    </header>
+	</article>
+	{{/foreach}}
+</section>
+{{/get}}

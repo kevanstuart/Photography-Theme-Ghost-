@@ -1,0 +1,62 @@
+/**
+ * SCSS File	: _lists.scss
+ * SCSS Dir 	: base
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Mixin
+ * -------------------------------------------------------------------------------------*/
+@mixin set-list($font-size:1, $list-style:none)
+{
+	list-style:$list-style;
+	@include padding(0);
+	@include margin(0);
+
+	li
+	{
+		@include font-size($font-size);
+	}
+}
+
+
+/**
+ * Site Navigation List
+ * -------------------------------------------------------------------------------------*/
+.site-nav ul
+{
+	@include set-list(1, none);
+	@include margin(0 auto);
+	@include clearfix;
+	
+	border:3px solid colours(lightest);
+	text-align:right;
+
+	li 
+	{
+		@include margin(0 0 0 1.5rem);
+		display:inline-block;
+		width:auto;
+	}
+}
+
+
+/**
+ * Tags List
+ * -------------------------------------------------------------------------------------*/
+.tags-list ul
+{
+	@include set-list(1, none);
+	@include margin(0 auto);
+	@include clearfix;
+	text-align:center;
+	display:block;
+
+	li 
+	{
+		@include margin(0);
+		display:inline-block;
+		width:auto;
+	}
+}

@@ -1,0 +1,9 @@
+<section class="loop index-loop" data-column="5">
+    {{#foreach posts}}
+    <article class="{{post_class}} float">
+        <a href="{{url}}">
+            <img src={{image}} alt="{{title}}"/>
+        </a>
+    </article>
+    {{/foreach}}
+</section>

@@ -1,0 +1,28 @@
+/**
+ * SCSS File	: _images.scss
+ * SCSS Dir 	: base
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Basic Images
+ * -------------------------------------------------------------------------------------*/
+img
+{
+	@include margin(0 auto);
+	max-width:100%;
+	display:block;
+	height:auto;
+}
+
+
+
+/**
+ * Footer logo Image
+ */
+.site-footer img
+{
+	@include margin(2rem auto 0);
+	max-width:40px;
+}

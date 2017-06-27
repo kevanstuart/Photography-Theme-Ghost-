@@ -1,0 +1,121 @@
+/**
+ * SCSS File	: _sections.scss
+ * SCSS Dir 	: base
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+/**
+ * Base
+ * -------------------------------------------------------------------------------------*/
+header, section, footer, nav, main
+{
+	@include padding(0);
+	@include clearfix;
+	position:relative;
+}
+
+
+/**
+ * Common padding
+ */
+.site-header,
+.site-footer
+{
+	@include padding(3rem 0);
+}
+
+
+/**
+ * Common max-width
+ */
+.site-header,
+.content,
+.site-footer
+{
+	@include margin(0 auto);
+	max-width:94vw;
+}
+
+
+/**
+ * Site Header
+ */
+.site-header
+{
+	line-height:0;
+}
+
+
+/**
+ * Site Nav
+ */
+.site-nav
+{
+	@include size(calc(100% - 200px) 46px);
+	overflow:hidden;
+	float:left;
+}
+
+
+/**
+ * Sub Page Loop Style
+ */
+.loop
+{
+	position:relative;	
+	height:auto;
+
+	.post
+	{
+		@include margin(0);
+		overflow:hidden;
+	}
+
+	.loop-column
+	{
+		@include size(20% auto);
+		@include margin(0);
+		overflow:hidden;
+		height:auto;
+		float:left;
+	}
+}
+
+
+/**
+ * Home Sub Loop Style
+ */
+.index-loop
+{
+	@include margin(3rem auto 0);
+	@include padding(2rem);
+	border:3px solid colours(darkest);
+}
+
+
+/**
+ * Tags list
+ */
+.tags-list
+{
+	@include set-colour(background, darkest);
+	@include set-colour(color, lightest);
+	@include margin(2rem 0 0 0);
+	@include padding(2rem);
+}
+
+
+/*.post-content
+{
+	@include margin(0 auto 4rem);
+	max-width:1000px;
+}
+
+
+.post-list-header
+{
+	@include margin(0 auto 0);
+	max-width:98%;
+}*/
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    {{!-- <link rel="shortcut icon" href="{{asset "favicon.ico"}}"> --}}
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    <header class="site-header">
+        <a href="{{@blog.url}}" class="logo-link">
+            <img src="/assets/images/logo.png" alt="{{@blog.title}}" />
+        </a>
+        {{navigation}}
+    </header>
+
+    {{{body}}}
+
+    <footer class="site-footer">
+        <p>All content is the property of Kevan Stuart and not to be used without permission.</p>
+        <p>Please contact me at blog {at} kevanstuart.com for licencing</p>
+        <p><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</p>
+
+        <img src="/assets/images/guitars.png" alt="{{@blog.title}}" />       
+    </footer>
+
+    {{ghost_foot}}
+    <!--script type="text/javascript" src="{{asset "scripts/main.min.js"}}"></script -->
+    <script type="text/javascript" src="{{asset "scripts/src/ImageRowsToColumns.js"}}"></script>
+
+</body>
+</html>

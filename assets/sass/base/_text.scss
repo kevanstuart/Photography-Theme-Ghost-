@@ -1,0 +1,32 @@
+/**
+ * SCSS File	: _text.scss
+ * SCSS Dir 	: base
+ * Author		: Kevan Stuart
+ * -------------------------------------------------------------------------------------*/
+
+
+.site-footer p
+{
+	@include font-size(-1);
+	@include margin(0);
+	text-align:center;
+}
+
+
+.post-content p
+{
+	@include font-size(2);
+	@include margin(0 0 2rem);
+}
+
+
+.tags-list time,
+.tags-list .social
+{
+	@include font-size(2, 1);
+	@include margin(1rem 0 0 0);
+	font-family:$heading, sans-serif;
+	text-transform:uppercase;
+	text-align:center;
+	display:block;
+}
